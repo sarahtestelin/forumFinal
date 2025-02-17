@@ -3,3 +3,13 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+api_doc:
+        path: /doc
+        controller: api_platform.swagger_ui.action
+authentication_token:
+        path: /api/authentication_token
+        methods: ['POST']
+messages_by_parent:
+        path: /api/messages/parent/{parentId}
+        controller: App\Controller\MessageController::getMessagesByParent
+        methods: GET
