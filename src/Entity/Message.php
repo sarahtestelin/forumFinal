@@ -28,7 +28,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
         new Put(),
         new Patch(),
         new Delete(),
-        new GetCollection( // ✅ Ajout de la route pour récupérer les réponses par parent_id
+        new GetCollection( 
             uriTemplate: '/messages/parent/{parentId}',
             controller: MessageController::class . '::getMessagesByParent',
             normalizationContext: ['groups' => 'message:list']

@@ -15,7 +15,7 @@ use ApiPlatform\Metadata\GetCollection;
 class MessageController extends AbstractController
 {
 
-    #[Route('/api/messages/parent/{parentId}', name: 'messages_by_parent', methods: ['GET'])]
+    #[Route('/api/messages/parent/{parentId}', name: 'messages_by_parent', methods: ['GET'], requirements: ['parentId' => '\d+'])]
     public function getMessagesByParent(
         int $parentId,
         MessageRepository $messageRepository,

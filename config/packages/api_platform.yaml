@@ -7,7 +7,7 @@ api_platform:
             vary: ['Content-Type', 'Authorization', 'Origin']
         extra_properties:
             standard_put: true
-        pagination_items_per_page: 5
+        pagination_items_per_page: 15
         normalization_context:
             skip_null_values: true
 
