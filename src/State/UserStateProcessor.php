@@ -17,7 +17,7 @@ class UserStateProcessor implements ProcessorInterface
     }
     public function process($data, Operation $operation, array $uriVariables = [], array $context =
         []) {
-// call your persistence layer to save $data
+// ca appelle la couche de persistance pour sauvegarder les données
         if ($data->getPassword()) {
             $data->setPassword(
                 $this->passwordHasher->hashPassword($data, $data->getPassword())
